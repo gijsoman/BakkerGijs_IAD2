@@ -1,0 +1,35 @@
+Ik denk dat ik voor het maken van het "Do not look into eyes" standbeeld de volgende dingen nodig heb:
+Hardware:
+- Stroom
+- Draad
+- materialen om het hoofd mee te maken
+- glas en hout om de behuizing van te maken
+- Een arduino Uno(of een kleinere)
+- Een infrarode sensor
+- Een pompje die ook het water pompt bij het sproeien van je ruiten
+- Een beetje slang waar het water doorheen gaat.
+- Weerstantjes en transistoren voor de Water pomp
+- een waterdicht resevoir
+- Een stuk plastic zodat ik iets kan maken wat het water opvangt.
+- een aan uit schakelaar zodat hij aan en uit kan.
+
+Software:
+-De arduino IDE
+-Een library voor de water pomp
+-Windows/Linux/Mac om de arduino IDE op te draaien. 
+-Verder een beetje code wat gemaakt wordt in de Arduino IDE.
+
+Stappenplan van wat de code doet.
+
+1. Als eerste zou ik er voor zorgen dat de infrarode sensor data uit kan lezen. Ik zou hier gewoon rauwe data van pakken en niet een library gebruiken
+omdat ik daar persoonlijk slechte ervaringen met waardes mee heb. 
+2. Vervolgens zou ik deze rauwe data omzetten naar iets mee betrouwbare data. Dit door telkens van de 20 rauwe values het gemiddelde te pakken. 
+3. Vervolgens zou ik een statement inbouwen. Als de waarde kleiner is dan een bepaalde waarde dan weetje dat er iemand voor de sensor hangt.
+4. Vervolgens zou ik een 2e statement toevoegen die zegt dat als iemand er langer dan een aantal seconden boven hangt(ongeveer 1-2 seconden) er daadwerkelijk actie ondernomen moet worden.
+5. Ik zou dan zeggen dat er een signaal naar de waterpomp gestuurd moet worden zodat deze water gaat spuiten. Zo krijg je het effect dat 
+wanneer iemand er ff bovenhangt er niks gebeurt maar wanneer iemand net iets te lang in de ogen kijkt het water wel gaat spuiten.
+
+Extra info:
+De sensor zou ik, net als op de video, zo plaatsen dat wanneer iemand er met zijn hoofd bovenhangt pas werkt. Als je hem namelijk naar voren laat wijzen dan heb je minder speling met waardes
+omdat je dan ook nog moet gaan berekenen hoe dichtbij iemand is. Als je hem zoals op de video doet dan hoef je alleenmaar te detecteren of iemand er boven hangt of niet.
+zo weet je zeker dat iemand dicht bij het raam is en dus harder schrikt.
