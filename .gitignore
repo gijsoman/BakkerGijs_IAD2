@@ -1,47 +1,81 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+###########################
+# ignore generated binaries
+# but not the data folder
+###########################
 
-# Folder config file
-Desktop.ini
+/bin/*
+!/bin/data/
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+#########
+# general
+#########
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+[Bb]uild/
+[Oo]bj/
+*.o
+[Dd]ebug*/
+[Rr]elease*/
+*.mode*
+*.app/
+*.pyc
+.svn/
+*.log
 
-# Windows shortcuts
-*.lnk
+########################
+# IDE files which should
+# be ignored
+########################
 
-# =========================
-# Operating System Files
-# =========================
+# XCode
+*.pbxuser
+*.perspective
+*.perspectivev3
+*.mode1v3
+*.mode2v3
+# XCode 4
+xcuserdata
+*.xcworkspace
+
+# Code::Blocks
+*.depend
+*.layout
+
+# Visual Studio
+*.sdf
+*.opensdf
+*.suo
+*.pdb
+*.ilk
+*.aps
+ipch/
+
+# Eclipse
+.metadata
+local.properties
+.externalToolBuilders
+
+##################
+# operating system
+##################
+
+# Linux
+*~
+# KDE
+.directory
+.AppleDouble
 
 # OSX
-# =========================
-
 .DS_Store
-.AppleDouble
-.LSOverride
-
+*.swp
+*~.nib
 # Thumbnails
 ._*
 
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
+# Windows
+# Image file caches
+Thumbs.db
+# Folder config file
+Desktop.ini
 
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+# Android
+.csettings
