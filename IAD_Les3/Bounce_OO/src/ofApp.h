@@ -4,7 +4,7 @@
 #include "Ball.h"
 #include "ofxGui.h"
 
-#define MAXBALLS 15
+#define MAXBALLS 16
 
 class ofApp : public ofBaseApp {
 
@@ -17,10 +17,14 @@ class ofApp : public ofBaseApp {
 
 		void keyPressed(int key);
 
-        Ball ball;
+        Ball ball[MAXBALLS];
 
 		ofxPanel gui;
 		ofParameter<int> radius;
-		ofParameter<int> x;
-		ofParameter<int> y;
+		ofParameter<int> xPos;
+		ofParameter<int> yPos;
+
+		int Walker = 0;
+
+		void mousePressed(int x, int y, int button);
 };
