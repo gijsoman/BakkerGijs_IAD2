@@ -1,0 +1,13 @@
+Hardware:
+	-Een Kinect
+	-Een boel wazig plexiglas
+	-Veel velle ledjes
+	-Een controller waarmee je de ledjes individueel kan aansturen
+	-Stroom
+	-Een Arduino om de signalen door te sturen
+	-Waarschijnlijk nog een paar andere chips om wat dingen aan te sturen
+
+Software:
+	-Als eerste moet de software de persoon kunnen tracken. Hiervoor zou ik waarschijnlijk een stukje code uit de library van de kinect jatten.
+	-Vervolgens wil je de informatie van de kinect die je binnenkrijgt converteren naar de ledjes die er inzitten. Je wil de ledjes aan laten gaan waar de ledematen van de persoon het dichts bij in de buurt zijn.
+	-Deze informatie wil je door sturen naar de array van lampjes die je hebt.
