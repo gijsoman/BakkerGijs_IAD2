@@ -44,12 +44,7 @@ void ofApp::keyPressed(int key)
 
 void ofApp::mousePressed(int x, int y, int button)
 {
-	if (button == 0)
-	{
-		Ball newBall;
-		newBall.setup(speedX, speedY, radius, color);
-		balls.push_back(newBall);
-	}
+
 }
 
 void ofApp::setupArduino(const int& version)
@@ -69,9 +64,22 @@ void ofApp::setupArduino(const int& version)
 void ofApp::digitalPinChanged(const int& pin)
 {
 	ofLog() << "Digitial Pin" << pin << " changed to " << arduino.getDigital(pin) << endl;
+	if (arduino.getDigital(pin) == 1)
+	{
+		Ball newBall;
+		newBall.setup(speedX, speedY, radius, color);
+		balls.push_back(newBall);
+	}
 }
 
 void ofApp::analogPinChanged(const int& pin)
 {
 	ofLog() << "Analog Pin" << pin << " changed to " << arduino.getAnalog(pin) << endl;
+	radius = arduino.getAnalog(pin);
+	for (unsigned int i = 0; i < balls.size(); i++) {
+		if (radius != balls[i].radius) {
+			balls[i].radius = radius;
+		}
+
+	}
 }
