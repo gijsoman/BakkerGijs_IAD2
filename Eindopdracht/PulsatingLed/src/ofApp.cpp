@@ -96,7 +96,7 @@ void ofApp::update(){
 
 
 			//if the fadeAmount is highger than 255 we set the fadeAmount to negative so the brightness will be decreased
-			if (brightness <= 0 || brightness >= 100)
+			if (brightness <= 0 || brightness >= 255)
 			{
 				if (brightness <= 0)
 				{
@@ -105,7 +105,7 @@ void ofApp::update(){
 					lightsOff = true;
 					cout << "Kom maar door" << endl;
 				}
-				if (brightness >= 100)
+				if (brightness >= 255)
 				{
 					arduino.sendPwm(LED_PIN, brightness);
 					arduino.sendPwm(LED_PIN2, brightness);

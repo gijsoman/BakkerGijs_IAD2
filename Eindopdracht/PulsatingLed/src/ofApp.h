@@ -26,12 +26,12 @@ class ofApp : public ofBaseApp{
 		//we need a timer for pulsating. 
 		float startTime;
 		bool timerEnd;
-		float endTime = 150;
+		float endTime = 70;
 
 		//we need a timer if the lights are off so we can keep it off for a while
 		float startTimeOff;
 		bool startTimeOffSet;
-		float endOffTime = 3000;
+		float endOffTime = 2000;
 		bool lightsOff;
 
 		//we need a timer if the lights are maxed so we can keep them maxed for a while
