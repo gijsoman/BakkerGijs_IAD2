@@ -41,8 +41,12 @@ class ofApp : public ofBaseApp{
 		bool lightsMax;
 		
 		//We need music!! which you can start and stop
+		ofSoundPlayer tones;
 
+		//Toggle for stop and start
+		bool spacePressed;
 		
-		
+		//Audio speed
+		float audioSpeed;
 		
 };
